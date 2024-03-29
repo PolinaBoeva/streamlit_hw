@@ -84,11 +84,12 @@ grade = pd.DataFrame(grade.reset_index())
 
 # In[13]:
 
-
-st.line_chart(
-   grade, x="work_year", y=["Entry-level", "Executive", "Mid-level", "Senior"]
+try:
+    st.line_chart(
+       grade, x="work_year", y=["Entry-level", "Executive", "Mid-level", "Senior"]
 )
-
+except Exception:
+   print('You can't build a graph based on the data')
 
 # In[14]:
 
@@ -106,8 +107,11 @@ working_conditions = pd.DataFrame(working_conditions.reset_index())
 
 # In[16]:
 
-
-st.line_chart(
-   working_conditions, x="work_year", y=["Hybrid", "In-person", "Remote"]
+try:
+    st.line_chart(
+       working_conditions, x="work_year", y=["Hybrid", "In-person", "Remote"]
 )
+except Exception:
+    print('You can't build a graph based on the data')
+
 
