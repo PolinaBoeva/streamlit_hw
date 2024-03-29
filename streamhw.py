@@ -71,7 +71,7 @@ st.dataframe(statistics)
 # In[11]:
 
 
-grade = pd.DataFrame(df.groupby(['work_year', 'experience_level']).size().unstack(fill_value=0))
+grade = pd.DataFrame(df[df['job_category'] == status].groupby(['work_year', 'experience_level']).size().unstack(fill_value=0))
 st.header(f'Number of employees by qualification levels and year in {status}')
 st.dataframe(grade)
 
@@ -93,7 +93,7 @@ st.line_chart(
 # In[14]:
 
 
-working_conditions = pd.DataFrame(df.groupby(['work_year', 'work_setting']).size().unstack(fill_value=0))
+working_conditions = pd.DataFrame(df[df['job_category'] == status].groupby(['work_year', 'work_setting']).size().unstack(fill_value=0))
 st.header(f'Number of employees by working conditions and year in {status}')
 st.dataframe(working_conditions)
 
