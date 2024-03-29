@@ -89,7 +89,7 @@ try:
        grade, x="work_year", y=["Entry-level", "Executive", "Mid-level", "Senior"]
 )
 except Exception:
-   st.write('You can not build a graph based on the data')
+   st.write('The graph cannot be built on the basis of data')
 
 # In[14]:
 
@@ -112,6 +112,6 @@ try:
        working_conditions, x="work_year", y=["Hybrid", "In-person", "Remote"]
 )
 except Exception:
-    st.write('You can not build a graph based on the data')
+    st.write('The graph cannot be built on the basis of data')
 
 
